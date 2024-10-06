@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #3C3D37;
+    color: #fff;
+}
+
+.banner {
+    display: flex;
+    justify-content: center; /* Yatayda ortalamak için */
+    align-items: center; /* Dikeyde ortalamak için */
+    height: 80px;
+    transition: height 0.3s;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Menü öğelerini yatayda ortalamak için */
+}
+
+nav ul li {
+    margin: 0 30px; /* Menü öğeleri arasındaki boşluk */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+main {
+    padding: 0;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #135D66;
+    width: 100%;
+    margin: 0;
+    padding: 5px 0 0px;
+}
+
+.about-image {
+    flex: 1;
+    transition: transform 0.5s;
+    max-width: 400px;
+    width: 400px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.about-image img {
+    width: 75%;
+    border-radius: 8px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+}
+
+.about-text {
+    flex: 2;
+    transition: transform 0.5s;
+    font-size: 1.2em;
+}
+
+.about-text h2 {
+    font-family: 'Montserrat', sans-serif; /* Roboto fontu */
+    font-weight: 900;
+    font-size: 4.5em;
+    margin-top: -50px;
+    margin-bottom: -10px;
+    margin-left: 15px;
+    color: #fff;
+    padding: 10px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif; /* KANAL LİSTESİ için Roboto fontu */
+    font-weight: 900;
+    font-size: 3em; /* Yazı boyutunu ayarlayabilirsiniz */
+    color: #135D66; /* Yazı rengini ayarlayabilirsiniz */
+    margin: 20px 0; /* Üst ve alt boşluklar */
+}
+
+.centered-heading {
+    text-align: center; /* Başlığı ortala */
+    font-family: 'Montserrat', sans-serif; /* Font ayarı */
+    font-weight: 900; /* Kalın yazı */
+    font-size: 3.5em; /* Yazı boyutu */
+    color: #135D66; /* Yazı rengi */
+    margin: 16px 0; /* Üst ve alt boşluklar */
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(-50px); /* Başlangıç pozisyonu */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efektleri */
+}
+
+.show {
+    opacity: 1; /* Görünür hale getir */
+    transform: translateY(0); /* Son pozisyon */
+}
+
+.about-text p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    font-size: 1.5em;
+    color: #C4D7FF;
+}
+
+.success-bars {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bar-wrapper {
+    margin: 20px;
+    margin-left: 30px;
+    flex: 1 0 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.bar-label {
+    position: absolute;
+    top: -35px;
+    left: -30px;
+    z-index: 1;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bar {
+    height: 45px;
+    background-color: #FF6A00;
+    border-radius: 5px;
+    transition: width 1s;
+    z-index: 0;
+    position: relative;
+}
+
+.bar-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #3C3D37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px; /* İnce menü yüksekliği */
+    border-radius: 15px; /* Kenarları yuvarlak yapma */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    opacity: 0; /* Başlangıçta görünmez */
+    pointer-events: none; /* Tıklanamaz yap */
+}
+
+.fixed-menu ul {
+    display: flex;
+}
+
+.fixed-menu ul li {
+    margin: 0 20px;
+}
+
+.fixed-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 12px; /* Yukarıdan biraz boşluk bırak */
+    left: 50%;
+    transform: translateX(-50%); /* Ortalamak için */
+    background: #3C3D37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* İnce menü yüksekliği */
+    border-radius: 15px; /* Kenarları yuvarlak yapma */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    opacity: 0; /* Başlangıçta görünmez */
+    pointer-events: none; /* Tıklanamaz yap */
+    z-index: 1000; /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+.fixed-menu ul {
+    display: flex;
+    padding: 0; /* Padding’i kaldır */
+    margin: 0; /* Margin’i kaldır */
+    list-style-type: none; /* Noktaları kaldır */
+}
+
+.fixed-menu ul li {
+    margin: 0 20px; /* Her bir menü öğesi arasındaki boşluk */
+}
+
+.fixed-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.heading-container {
+    display: flex; /* Çizgiler ve başlığı yan yana dizmek için flex kullanıyoruz */
+    align-items: center; /* Dikeyde ortalamak için */
+    margin: 0px 0; /* Üst ve alt boşlukları azaltarak yukarı kaydırma */
+}
+
+.line {
+    height: 2px; /* Çizgi yüksekliği */
+    background-color: #135D66; /* Çizgi rengi */
+    transition: transform 0.5s ease; /* Animasyon için geçiş efekti */
+    transform: scaleX(1); /* Her zaman görünür yap */
+    margin: 0 10px; /* Çizgiler ile başlık arasında boşluk */
+    flex: 1; /* Çizgilerin genişliğini esnet */
+}
+
+.channel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Kartları ortalamak için */
+    gap: 20px; /* Kartlar arasındaki boşluk */
+    margin: 20px; /* Üst ve alt boşluklar */
+}
+
+.channelCards-container {
+    display: flex;
+    flex-wrap: wrap; /* Eğer kartlar sığmazsa alt satıra geçmesi için */
+    justify-content: space-around; /* Kartları eşit aralıklarla dağıtmak için */
+    gap: 20px; /* Kartlar arasındaki boşluğu ayarlamak için */
+    padding: 20px; /* Kartların etrafına boşluk eklemek için */
+}
+
+
+.channelCard {
+    background-color: #fff; /* Kart arka plan rengi */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 0; /* Üst ve alt padding ekledik */
+    margin: 20px; /* Kartların dışarıda boşluk bırakması için */
+    width: 280px; /* Kart genişliği */
+    height: 390px; /* Kart yüksekliği */
+    text-align: center;
+    position: relative; /* Pozisyonu relatif yap */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover için geçiş efekti */
+}
+
+/* Kartın sağ ve sol taraflarına renk eklemek için */
+.channelCard::before,
+.channelCard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; /* Sağ ve sol tarafın genişliği */
+    transition: background-color 0.3s ease; /* Hover için geçiş efekti */
+}
+
+.channelCard::before {
+    left: 0;
+    background-color: #135D66; /* Sol taraf rengi */
+    border-radius: 15px 0 0 15px; /* Kenarları yuvarlat */
+}
+
+.channelCard::after {
+    right: 0;
+    background-color: #135D66; /* Sağ taraf rengi */
+    border-radius: 0 15px 15px 0; /* Kenarları yuvarlat */
+}
+
+/* Hover durumunda animasyon ekliyoruz */
+.channelCard:hover {
+    transform: scale(1.05); /* Kartı %5 büyüt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölgeyi daha belirgin yap */
+}
+
+
+.channelCard:hover::before,
+.channelCard:hover::after {
+    background-color: #114b4f; /* Hover durumunda kenar renklerini değiştirin */
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif; /* Fiyat için Montserrat fontu */
+    font-size: 1.2em; /* Fiyat metni boyutu */
+    color: #FF6A00; /* Fiyat metin rengi */
+    background-color: #135D66; /* Fiyat kısmı arka plan rengi */
+    height: 15%; /* Yüksekliği tamamen kaplasın */
+    width: 100%; /* Genişliği tamamen kaplasın */
+    border-radius: 0 0 12px 12px; /* Alt köşeleri yuvarlat */
+    display: flex; /* İçeriği esnek bir düzenle hizalamak için */
+    align-items: center; /* Dikeyde ortalamak için */
+    justify-content: center; /* Yatayda ortalamak için */
+}
+
+.channel-logo {
+    width: 60%; /* Logoyu %40 küçülttük */
+    border-radius: 8px;
+    margin-bottom: -5px; /* Alt boşluk */
+}
+
+.channel-name {
+    font-family: 'Montserrat', sans-serif; /* Kanal adı için Montserrat fontu */
+    font-size: 1.5em;
+    margin: 6px 0;
+}
+
+.underline {
+    width: 50%; /* Çizgi genişliği */
+    height: 2px;
+    background-color: #135D66; /* Çizgi rengi */
+    margin: 0 auto 6px; /* Ortalamak için */
+}
+
+.stats {
+    font-family: 'Roboto', sans-serif; /* Abone ve Son 48 için Roboto fontu */
+    font-size: 1.1em; /* Label boyutu */
+    margin: 5px 0; /* Üst ve alt boşluk */
+    margin-left: 0px;
+}
+
+.stats .value {
+    color: #003366; /* Koyu mavi renk */
+    font-size: 1.3em; /* Değer boyutu daha büyük */
+}
+
+.kanal-listesi {
+    text-align: center;
+    margin-bottom: 20px; /* Kanal listesi ile başarılarımız arasında boşluk */
+}
+
+.basari-div {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Çizgileri ve başlığı ortalamak için */
+    margin-top: 15px; /* Başarılarımız bölümü için üst boşluk */
+}
+
+.basari-div::before,
+.basari-div::after {
+    content: '';
+    flex: 1; /* Çizgilerin genişliği */
+    border-top: 3px solid #135D66; /* Çizgi rengi ve kalınlığı */
+    margin: 0 10px; /* Çizgiler arasındaki boşluk */
+}
+
+.basari-div h2 {
+    margin: 0; /* Başlık için üst ve alt boşluğu kaldır */
+}
+
+.basari-container {
+    margin: 20px; /* Genel boşluk */
+}
+
+.basari-kart {
+    display: flex; /* Kartı yatay düzende oluştur */
+    align-items: center; /* Dikeyde ortala */
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 15px; /* İçerik boşluğu */
+    margin-bottom: 15px; /* Kartlar arasındaki boşluk */
+    width: 720px; /* Kartın genişliği */
+    height: auto;
+    max-width: 800px; /* Maksimum genişliği ayarlayın */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover için geçiş efekti */
+    margin-left: 20px;
+    float: left;
+}
+
+.basari-kart2 {
+    display: flex; /* Kartı yatay düzende oluştur */
+    align-items: center; /* Dikeyde ortala */
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 15px; /* İçerik boşluğu */
+    margin-bottom: 15px; /* Kartlar arasındaki boşluk */
+    width: 720px; /* Kartın genişliği */
+    height: auto;
+    max-width: 800px; /* Maksimum genişliği ayarlayın */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover için geçiş efekti */
+    margin-left: 28px;
+    float: right;
+    margin-top: -388px;
+}
+
+.basari-kart2:hover {
+    transform: scale(1.05); /* Kartı %5 büyüt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölgeyi daha belirgin yap */
+}
+
+.basari-kart3 {
+    display: flex; /* Kartı yatay düzende oluştur */
+    align-items: center; /* Dikeyde ortala */
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 15px; /* İçerik boşluğu */
+    margin-bottom: 15px; /* Kartlar arasındaki boşluk */
+    width: 750px; /* Kartın genişliği */
+    height: auto;
+    max-width: 800px; /* Maksimum genişliği ayarlayın */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover için geçiş efekti */
+    margin-left: 28px;
+    float: right;
+    margin-top: -195px;
+    margin-right: -12px;
+}
+
+.basari-kart3:hover {
+    transform: scale(1.05); /* Kartı %5 büyüt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölgeyi daha belirgin yap */
+}
+
+
+/* Başarı kartı hover durumunda animasyon ekliyoruz */
+.basari-kart:hover {
+    transform: scale(1.05); /* Kartı %5 büyüt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölgeyi daha belirgin yap */
+}
+
+
+
+.basari-resim {
+    flex: 1; /* Resim alanını ayarlamak için *
+    margin-right: -70px; /* Resim ile metin arasındaki boşluk */
+}
+
+.basari-resim img {
+    width: 60%; /* Resmi tam genişlikte yap */
+    border-radius: 8px; /* Kenar yuvarlama */
+    height: auto; /* Yüksekliği otomatik ayarla */
+}
+
+.basari-bilgi {
+    flex: 2; /* Metin alanını ayarlamak için */
+}
+
+.basari-isim {
+    font-family: 'Poppins', sans-serif; /* Font ayarı */
+    font-size: 2.5em; /* Başarı ismi boyutu */
+    color: #135D66; /* Başarı ismi rengi */
+    margin-bottom: 5px; /* Başlık ile açıklama arasındaki boşluk */
+    font-weight: 900;
+    margin-top: -px;
+    margin-left: -65px;
+}
+
+.basari-aciklama {
+    font-family: 'Raleway', sans-serif; /* Font ayarı */
+    font-weight: 300; /* Hafif yazı */
+    color: #555; /* Açıklama rengi */
+    font-size: 1.1em; /* Açıklama boyutu */
+    margin-left: -65px;
+}
+
+.centered-description {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333333; /* Yazı rengi: gri tonları */
+    margin-top: -20px;
+}

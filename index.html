@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Kanal Satışı</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body id="home">
+    <header>
+        <div class="banner">
+            <nav>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#channelCatalog">Kanal Listesi</a></li>
+                    <li><a href="#basarilar">Başarılar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="fixed-menu" class="fixed-menu">
+        <ul>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#channelCatalog">Kanal Listesi</a></li>
+            <li><a href="#basarilar">Başarılar</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="about-image">
+                <img src="hakimda.png" alt="Çalışan Adam">
+            </div>
+            <div class="about-text">
+                <h2>Hakkımızda</h2>
+                <p>Biz, YouTube kanalları geliştiriyoruz ve satıyoruz. Başarılarımız:</p>
+                <div class="success-bars">
+                    <div class="bar-wrapper">
+                        <p class="bar-label">Toplam Kanal Sayısı</p>
+                        <div class="bar" id="channels-bar">
+                        </div>
+                    </div>
+                    <div class="bar-wrapper">
+                        <p class="bar-label">Toplam Abone Sayısı</p>
+                        <div class="bar" id="subscribers-bar">
+                        </div>
+                    </div>
+                    <div class="bar-wrapper">
+                        <p class="bar-label">Toplam İzlenme Sayısı</p>
+                        <div class="bar" id="views-bar">
+                        </div>
+                    </div>
+                    <div class="bar-wrapper">
+                        <p class="bar-label">Toplam Kazanılan Para</p>
+                        <div class="bar" id="revenue-bar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="channelCatalog">
+            <div class="heading-container">
+                <div class="line"></div>
+                <h2 class="centered-heading">KANAL LİSTESİ</h2>
+                <div class="line"></div>
+            </div>
+            <p class="centered-description">Şu an elimizde olan kanallar</p>
+            <div class="channelCards-container">
+                <div class="channelCard">
+                    <a href="https://www.youtube.com/@D%C3%BC%C5%9F%C3%BCncem" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->
+                    <img class="channel-logo" src="dusuncem.png" alt="Düşüncem"></a>
+                    <h3 class="channel-name">Düşüncem</h3>
+                    <div class="underline"></div>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Abone:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">155K ABONE</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Son 48:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">55464</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">PK durumu:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">Açık</span></p>
+                    <p class="price">Fiyat: 10000 TL</p>
+                </div>
+                <div class="channelCard">
+                    <a href="https://www.youtube.com/@CavitV2" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->
+                    <img class="channel-logo" src="v2.jpg" alt="CavitV2"></a>
+                    <h3 class="channel-name">Cavit V2</h3>
+                    <div class="underline"></div>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Abone:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">42K ABONE</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Son 48:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">500K</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">PK durumu:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">Kapalı</span></p>
+                    <p class="price">Fiyat: 8000 TL</p>
+                </div>
+                <div class="channelCard">
+                    <a href="https://www.youtube.com/@PlanetaVirall" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->
+                    <img class="channel-logo" src="planeta.jpg" alt="Planeta Viral"></a>
+                    <h3 class="channel-name">Planeta Viral</h3>
+                    <div class="underline"></div>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Abone:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">68K ABONE</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Son 48:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">800K</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">PK durumu:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">Kapalı</span></p>
+                    <p class="price">Fiyat: ---</p>
+                </div>
+                <div class="channelCard">
+                    <a href="https://www.youtube.com/@Gizemli_Olaylar0" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->        
+                    <img class="channel-logo" src="gizemli.webp" alt="Gizemli Olaylar"></a>
+                    <h3 class="channel-name">Gizemli Olaylar</h3>
+                    <div class="underline"></div>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Abone:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">0 ABONE</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">Son 48:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">0</span></p>
+                    <p class="stats"><span style="font-family: 'Montserrat', sans-serif;">PK durumu:</span> <span class="value" style="font-family: 'Montserrat', sans-serif; color: darkblue; font-size: larger;">Kapalı</span></p>
+                    <p class="price">Fiyat: ---</p>
+                </div>
+            </div>
+        </section>
+
+<div class="basari-container" id="basarilar">
+    <h2 class="basari-div">BAŞARILARIMIZ</h2>
+    <div class="basari-kart">
+        <div class="basari-resim">
+            <a href="https://www.youtube.com/channel/UCDrdcrCuCM08mr0g7Ixx0qQ" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->  <img src="basari1.png" alt="Başarı 1"></a>
+        </div>
+        <div class="basari-bilgi">
+            <h3 class="basari-isim">9 GÜNDE - 100K ABONE!</h3>
+            <p class="basari-aciklama">"Tercih Zamanı" kanalı, yalnızca 9 gün içinde 100.000 aboneye ulaşarak büyük bir başarı elde etti.
+Bu süre zarfında toplamda 5 milyon izlenmeye ulaşarak içeriklerimizin geniş bir kitleye ulaştığını gösterdi. </p>
+        </div>
+    </div>
+
+    <div class="basari-kart">
+        <div class="basari-resim">
+            <img src="plaketler2.png" alt="Başarı 2">
+        </div>
+        <div class="basari-bilgi">
+            <h3 class="basari-isim">2 ADET - PLAKET</h3>
+            <p class="basari-aciklama">"Dijital Düşünce" ve "Düşüncem" kanalları, 100.000 aboneye ulaşarak büyük bir başarı elde etti.
+Her iki kanal da bu önemli kilometre taşını aşarak içeriklerinin değerini ortaya koydu.</p>
+        </div>
+    </div>
+    <div class="basari-kart2">
+        <div class="basari-resim">
+            <a href="https://www.youtube.com/@PlanetaVirall" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->            
+            <img src="gunde42.png" alt="Başarı 3"></a>
+        </div>
+        <div class="basari-bilgi">
+            <h3 class="basari-isim">1 GÜNDE 42K ABONE!</h3>
+            <p class="basari-aciklama">"Planeta Viral" kanalı, bir günde 42.000 abone kazanarak etkileyici bir büyüme gösterdi. Bu hızlı artış, kanalın dikkat çeken içeriğinin kısa sürede büyük bir kitleye ulaşmasını sağladı.</p>
+        </div>
+    </div>
+</div>
+<div class="basari-kart3">
+        <div class="basari-resim">
+            <a href="https://www.youtube.com/shorts/ayjGW3GrdDs" target="_blank"> <!-- Buraya kanalın linkini ekleyin -->            
+            <img src="54milyon.png" alt="Başarı 4"></a>
+        </div>
+        <div class="basari-bilgi">
+            <h3 class="basari-isim">TEK VİDEO - 5.4 MİLYON!</h3>
+            <p class="basari-aciklama">"Düşüncem" kanalının tek videosu kısa sürede büyük bir izleyici kitlesine ulaşarak 5.4 milyon izlenme kazanarak önemli başarı elde etmiştir.</p>
+        </div>
+    </div>
+</div>
+        
+</body>
+</html>
